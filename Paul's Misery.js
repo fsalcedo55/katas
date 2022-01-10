@@ -10,11 +10,20 @@ function paul(x) {
 
   for (let activity of x) result += miseryScore[activity];
 
-  if (result < 40) {
-    return "Super happy!";
-  } else if (result < 70 && result >= 40) {
-    return "Happy!";
-  } else if (result < 100 && result >= 70) {
-    return "Sad!";
-  } else return "Miserable!";
+  return result < 40
+    ? "Super happy!"
+    : result < 70
+    ? "Happy!"
+    : result < 100
+    ? "Sad!"
+    : "Miserable!";
 }
+
+paul([
+  "Petes kata",
+  "Petes kata",
+  "eating",
+  "Petes kata",
+  "Petes kata",
+  "eating",
+]);
